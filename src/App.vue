@@ -1,0 +1,106 @@
+<template>
+    <div id="app">
+        <!--<h1 class="aa">66666666</h1>-->
+        <transition name="fade"
+                    mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+</template>
+
+<script >
+    export default {
+    name: 'app',
+        data(){
+            return {
+                myproducts: {},
+                timeLength:"",
+                timer:""
+            }
+        },
+        methods:{
+            backLogin(){
+                if(this.$route.path=="/login"){
+                    this.timeLength=1800;
+                    return ;
+                }else{
+                    clearInterval(this.timer);
+                    this.timeLength=1800;
+                    this.timer=setInterval(()=>{
+                        this.timeLength--;
+                        if(this.timeLength==0){
+                            this.$router.push({ path: '/login' });
+                            this.timeLength=1800;
+                            console.log("jump");
+                            clearInterval(this.timer);
+                            return ;
+                        }
+                    },1000)
+                }
+            }
+        },
+        components: {
+
+        },
+        mounted:function(){
+            document.documentElement.onkeydown=this.backLogin;  
+            document.documentElement.onclick=this.backLogin;  
+            document.documentElement.onmousemove=this.backLogin;
+        }
+    }
+
+</script>
+
+<style lang='scss'>
+    .aa{
+        /*color: $color-primary;*/
+    }
+    body {
+        margin: 0px;
+        padding: 0px;
+        /*background: url(assets/bg1.jpg) center !important;
+            background-size: cover;*/
+        font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    #app {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .el-submenu [class^=fa] {
+        vertical-align: baseline;
+        margin-right: 10px;
+    }
+
+    .el-menu-item [class^=fa] {
+        vertical-align: baseline;
+        margin-right: 10px;
+    }
+
+    .toolbar {
+        background: #f2f2f2;
+        padding: 10px;
+         border: 1 px solid #dfe6ec;
+        margin: 10px 0px;
+    }
+
+    .el-form-item {
+        margin-bottom: 10px;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: all .2s ease;
+    }
+
+    .fade-enter,
+    .fade-leave-active {
+        opacity: 0;
+    }
+    
+</style>
