@@ -802,6 +802,7 @@ import vue from "vue"
                     }else if(this.activeName == "fourth"){
                         this.pendingContract.verifyStatus="3"
                     }
+                    console.log(process.env)
                     window.location.href=process.env.API+"/contract/export?applicatonNo="+this.pendingContract.applicationNo
                     +"&channelContacts="+this.pendingContract.channelContacts
                     +"&channelName="+this.pendingContract.channelName
@@ -1093,7 +1094,7 @@ import vue from "vue"
         watch:{
             address:function(newval){
 
-//                this.obj.default =
+
             }
         },
         mounted:function(){
