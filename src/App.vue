@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <!--<h1 class="aa">66666666</h1>-->
         <transition name="fade"
                     mode="out-in">
             <router-view></router-view>
@@ -52,14 +51,9 @@
 </script>
 
 <style lang='scss'>
-    .aa{
-        /*color: $color-primary;*/
-    }
     body {
         margin: 0px;
         padding: 0px;
-        /*background: url(assets/bg1.jpg) center !important;
-            background-size: cover;*/
         font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
         font-size: 14px;
         -webkit-font-smoothing: antialiased;
