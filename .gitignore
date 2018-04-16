@@ -4,3 +4,4 @@ node_modules/
 npm-debug.log
 .editorconfig
 dist/
+_config.yml

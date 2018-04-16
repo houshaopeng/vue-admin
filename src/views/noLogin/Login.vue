@@ -1,7 +1,7 @@
 <template>
   <el-form :model="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container" >
     <div class="title">
-      <h3>后台管理系统登录</h3>
+      <h3>ele-后台管理系统</h3>
     </div>
     <div class="input_container">
       <el-form-item prop="account"  style="width: 300px;margin:20px auto 0">
@@ -85,7 +85,7 @@
           }
       },
       handleSubmit() {
-        console.log(process.env)
+        // console.log(process.env)
         sessionStorage.setItem('userInfo', JSON.stringify({userToken:'1234567890',sysUserName:'admin'}));
         this.$router.push({ path:'/orderCenter' });
         // if(this.ruleForm2.account  && this.ruleForm2.checkPass){
