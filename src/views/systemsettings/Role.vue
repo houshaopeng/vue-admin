@@ -742,10 +742,10 @@
             },
         },
         created:function(){ 
-	       this.power();
-	       this.pageSize = 20;
-	       this.showRole();
-	       this.autoNum();
+	       // this.power();
+	       // this.pageSize = 20;
+	       // this.showRole();
+	       // this.autoNum();
 	   }
     }
 </script>

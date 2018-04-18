@@ -62,14 +62,14 @@ let routes = [{
 				path: '/loanProduct',
 				// component: loanProduct,
                 component : resolve => require(['COMPONENT/productInput/loanProduct.vue'], resolve),
-				name: '借款产品录入',
+				name: '产品1录入',
 				hidden: false
 			},
 			{
 				path: '/wealthProduct',
 				// component: wealthProduct,
                 component : resolve => require(['COMPONENT/productInput/wealthProduct.vue'], resolve),
-				name: '理财产品录入',
+				name: '产品2录入',
 				hidden: false
 			},
 		]
@@ -130,24 +130,14 @@ let routes = [{
 		]
 	},
 	{
-		path: '/',
-		// component: Home,
-        component : resolve => require(['COMPONENT/Home.vue'], resolve),
-		name: '门店设置',
-		iconCls: 'fa fa-user',
-		children: [
-
-		]
-	},
-	/*{
 	    path: '/',
-	    component: Home,
 	    name: '图表分析',
+	    component : resolve => require(['COMPONENT/Home.vue'], resolve),
 	    iconCls: 'fa fa-bar-chart',
-	    children: [
-	        {path: '/echarts', component: echarts, name: '人员分析'}
-	    ]
-	},*/
+	    // children: [
+	    //     {path: '/echarts', component: echarts, name: '人员分析'}
+	    // ]
+	},
 	{
 		path: '/',
 		// component: Home,

@@ -12,7 +12,7 @@
                 <el-col :span="6">
                     <el-form label-width="80px">
                         <el-form-item label="接单公司:">
-                            <el-select v-model="value" placeholder="善林商务">   <!-- TODO -->
+                            <el-select v-model="value" placeholder="公司1">   <!-- TODO -->
                                 <el-option
                                         v-for="item in options1"
                                         :key="item.value"
@@ -49,10 +49,10 @@
                 },
                 options1: [{
                     value: '选项1',
-                    label: '善林商务'
+                    label: '公司1'
                 },{
                     value: '选项2',
-                    label: '善悉商务'
+                    label: '公司2'
                 }],
                 value: '选项1',
 

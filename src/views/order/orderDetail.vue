@@ -52,7 +52,7 @@
                     </el-form-item>
                 </el-col>
                 <el-col :span="8">
-                    <el-form-item label="借款期限：">
+                    <el-form-item label="期限：">
                         <el-input v-model="money" placeholder="36个月" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
@@ -66,12 +66,12 @@
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="产品名称：">
-                        <el-input v-model="productName" placeholder="善美贷" :maxlength = "20"></el-input>
+                        <el-input v-model="productName" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="接单公司：">
-                        <el-input v-model="orderCompany" placeholder="善林商务" :maxlength = "20"></el-input>
+                        <el-input v-model="orderCompany" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
@@ -89,12 +89,12 @@
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="产品名称：">
-                        <el-input v-model="productName" placeholder="善美贷" :maxlength = "20"></el-input>
+                        <el-input v-model="productName" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="接单公司：">
-                        <el-input v-model="orderCompany" placeholder="善林商务" :maxlength = "20"></el-input>
+                        <el-input v-model="orderCompany" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
@@ -112,12 +112,12 @@
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="产品名称：">
-                        <el-input v-model="productName" placeholder="工薪贷" :maxlength = "20"></el-input>
+                        <el-input v-model="productName" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="接单公司：">
-                        <el-input v-model="orderCompany" placeholder="善悉商务" :maxlength = "20"></el-input>
+                        <el-input v-model="orderCompany" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
@@ -135,12 +135,12 @@
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="产品名称：">
-                        <el-input v-model="productName" placeholder="善美贷" :maxlength = "20"></el-input>
+                        <el-input v-model="productName" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">
                     <el-form-item label="接单公司：">
-                        <el-input v-model="orderCompany" placeholder="善林商务" :maxlength = "20"></el-input>
+                        <el-input v-model="orderCompany" placeholder="" :maxlength = "20"></el-input>
                     </el-form-item>
                 </el-col>
                 <el-col :span="6">

@@ -986,8 +986,8 @@
 			}
 		},
 		created: function() {
-			this.check();
-			this.showQuery();
+			// this.check();
+			// this.showQuery();
 		},
 		mounted: function() {
 

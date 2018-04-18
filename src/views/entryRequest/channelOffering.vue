@@ -645,8 +645,8 @@
 
 		},
 		mounted() {
-			this.query();
-			this.getChanneRange();
+			// this.query();
+			// this.getChanneRange();
 		}
 	}
 </script>

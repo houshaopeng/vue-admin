@@ -858,20 +858,20 @@
 					this.channelShow = false;
 					this.channelsValue = "";
 				}
-				this.getChannelName();
+				// this.getChannelName();
 			}
 		},
 		created() {
 			this.$nextTick(() => {
-				this.getChannelName();
+				// this.getChannelName();
 			})
 
 		},
 		mounted() {
 			this.pageSize = 20;
-			this.query();
-			this.getVerifyLevel();
-			this.noExamine();
+			// this.query();
+			// this.getVerifyLevel();
+			// this.noExamine();
 		}
 
 	}

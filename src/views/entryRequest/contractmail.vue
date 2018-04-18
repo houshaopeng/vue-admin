@@ -1182,142 +1182,7 @@
 			handleClick(tab, event) {
 				//清空输入框
 				// this.clearInput();
-				if(tab.name == "first") {
-					this.activeName = "first";
-				} else if(tab.name == "second") {
-					//清空上次选择的订单信息
-					this.currentOrder = "";
-					this.pendingContract = "";
-
-					this.activeName = "second";
-					this.sendNumber = true;
-					this.singleNumber = false;
-					this.$http({
-						method: 'POST',
-						url: process.env.API + "/contract/search",
-						body: JSON.stringify(this.order1),
-						headers: {
-							"x-sljr-session-token": JSON.parse(sessionStorage.getItem("userInfo")).userToken,
-						}
-					}).then((res) => {
-						if(res.data.code = "000000") {
-							this.tableData1 = res.data.data;
-							if(res.data.pageInfo) {
-								this.pageSize = res.data.pageInfo.pageSize;
-								this.total = res.data.pageInfo.total;
-								this.pageIndex = res.data.pageInfo.pageNum;
-							}
-							for(var i = 0; i < this.tableData1.length; i++) {
-								this.tableData1[i].applicationTime = new Date(res.data.data[i].applicationTime).toLocaleDateString().replace(/\//g, '-');
-								if(res.data.data[i].mailStatus == "0") {
-									this.tableData1[i].mailStatus = "未寄回"
-									this.queryExpress = false;
-								} else if(res.data.data[i].mailStatus == "1") {
-									this.tableData1[i].mailStatus = "已寄回"
-								}
-
-								if(res.data.data[i].contractTypes == "0") {
-									this.tableData1[i].contractTypes = "标准合同"
-								} else if(res.data.data[i].contractTypes == "1") {
-									this.tableData1[i].contractTypes = "非标准合同"
-								}
-							}
-
-						}
-
-					}, (res) => {
-						this.$message({
-							message: "网络请求错误",
-							type: 'error'
-						})
-					})
-				} else if(tab.name == "third") {
-					//清空上次选择的订单信息
-					this.currentOrder = "";
-					this.pendingContract = "";
-
-					this.activeName = "third";
-					this.sendNumber = false;
-					this.singleNumber = true;
-					this.$http({
-						method: 'POST',
-						url: process.env.API + "/contract/search",
-						body: JSON.stringify(this.order2),
-						headers: {
-							"x-sljr-session-token": JSON.parse(sessionStorage.getItem("userInfo")).userToken,
-						}
-					}).then((res) => {
-						if(res.data.code == "000000") {
-							this.tableData2 = res.data.data;
-							if(res.data.pageInfo) {
-								this.pageSize = res.data.pageInfo.pageSize;
-								this.total = res.data.pageInfo.total;
-								this.pageIndex = res.data.pageInfo.pageNum;
-							}
-							for(var i = 0; i < this.tableData2.length; i++) {
-								this.tableData2[i].applicationTime = new Date(res.data.data[i].applicationTime).toLocaleDateString().replace(/\//g, '-');
-								if(res.data.data[i].mailStatus == "2") {
-									this.tableData2[i].mailStatus = "未寄出"
-									this.queryExpress = false;
-								} else if(res.data.data[i].mailStatus == "3") {
-									this.tableData2[i].mailStatus = "已寄出"
-								}
-								if(res.data.data[i].contractTypes == "0") {
-									this.tableData2[i].contractTypes = "标准合同"
-								} else if(res.data.data[i].contractTypes == "1") {
-									this.tableData2[i].contractTypes = "非标准合同"
-								}
-							}
-						}
-
-					}, (res) => {
-						this.$message({
-							message: "网络请求错误",
-							type: 'error'
-						})
-					})
-				} else if(tab.name == "fourth") {
-					//清空上次选择的订单信息
-					this.currentOrder = "";
-					this.pendingContract = "";
-
-					this.activeName = "fourth";
-					this.sendNumber = true;
-					this.singleNumber = true;
-					this.$http({
-						method: 'POST',
-						url: process.env.API + "/contract/search",
-						body: JSON.stringify(this.order3),
-						headers: {
-							"x-sljr-session-token": JSON.parse(sessionStorage.getItem("userInfo")).userToken,
-						}
-					}).then((res) => {
-						if(res.data.code == "000000") {
-							this.tableData3 = res.data.data;
-							if(res.data.pageInfo) {
-								this.pageSize = res.data.pageInfo.pageSize;
-								this.total = res.data.pageInfo.total;
-								this.pageIndex = res.data.pageInfo.pageNum;
-							}
-							for(var i = 0; i < this.tableData3.length; i++) {
-								this.tableData3[i].applicationTime = new Date(res.data.data[i].applicationTime).toLocaleDateString().replace(/\//g, '-');
-
-								if(res.data.data[i].contractTypes == "0") {
-									this.tableData3[i].contractTypes = "标准合同"
-								} else if(res.data.data[i].contractTypes == "1") {
-									this.tableData3[i].contractTypes = "非标准合同"
-								}
-							}
-
-						}
-
-					}, (res) => {
-						this.$message({
-							message: "网络请求错误",
-							type: 'error'
-						})
-					})
-				}
+				
 			},
 			query() { //查询
 
@@ -1720,9 +1585,9 @@
 
 		},
 		mounted: function() {
-			this.searchExpressCompany();
-			this.query();
-			this.notice();
+			// this.searchExpressCompany();
+			// this.query();
+			// this.notice();
 			this.getNowFormatDate();
 		}
 	}
