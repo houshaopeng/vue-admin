@@ -148,13 +148,13 @@ let routes = [{
 				path: '/channelOffering',
 				// component: channelOffering,
                 component : resolve => require(['COMPONENT/entryRequest/channelOffering.vue'], resolve),
-				name: '渠道提报'
+				name: '渠道申请'
 			},
 			{
 				path: '/outletsQuote',
 				// component: outletsQuote,
                 component : resolve => require(['COMPONENT/entryRequest/outletsQuote.vue'], resolve),
-				name: '网点提报'
+				name: '网点申请'
 			},
 			{
 				path: '/contractMailing',
@@ -167,7 +167,7 @@ let routes = [{
 				path: '/contractmail',
 				// component: contractmail,
                 component : resolve => require(['COMPONENT/entryRequest/contractmail.vue'], resolve),
-				name: '合同邮寄'
+				name: '合同管理'
 			},
 			{
 				path: '/Contractretention/:formCode',
