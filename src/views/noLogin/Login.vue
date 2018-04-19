@@ -19,7 +19,7 @@
         <!--<el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号" :maxlength='10' style="background: red"></el-input>-->
       </el-form-item>
       <el-row v-show="loginErrorTime>=2? true:false" style="width:300px;margin-left:25px;">
-        <el-col  :span="10">
+        <el-col  :span="10">  
           <div>
             <el-input type="text" v-model ="localVerificationCode" auto-complete="off" placeholder="请输入验证码" style="display:inline-block"  @keyup.enter.native="handleSubmit" :maxlength='4'></el-input>
           </div>

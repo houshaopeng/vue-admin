@@ -5,3 +5,5 @@ npm-debug.log
 .editorconfig
 dist/
 _config.yml
+puh.pub
+puh
