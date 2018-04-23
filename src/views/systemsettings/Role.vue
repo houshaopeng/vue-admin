@@ -64,7 +64,7 @@
 				</el-pagination>
 			</div>
         </template>
-		<!--------------------添加新角色-------------------->
+		<!--添加新角色-->
         <el-dialog title="添加角色" :visible.sync="dialogFormVisible" :show-close="false">
             <el-form :model="addForm"  label-width="90px">
                 <el-row >
@@ -135,7 +135,7 @@
             </el-tree>
         </el-dialog>
 
-        <!--------------------------编辑角色------------------------------>
+        <!--编辑角色-->
         <el-dialog title="编辑角色" :visible.sync="editFormVisible" :show-close="false">
 
             <el-form :model="editRole"  label-width="90px">
@@ -216,14 +216,6 @@
             	rNumber:'',  //输入角色编号
             	rName:'',    //输入角色名称
             	roleMain:[],  //角色数据集合
-//          	roleMain:[{   //角色数据集合
-//          		roleNo:'',
-//          		roleName:'',
-//          		roleDesc:'',
-//          		createdAt:'',
-//          		roleStatus:''
-//          	}],
-//				roleStatus:'',
 				addForm:{  //添加角色
 					desc:'',
 					roleDesc:''
@@ -245,10 +237,6 @@
             	roleValue:'',
                 addRoleValue:'', // 添加角色 角色选择
             	roleMenu:[], //查询到的权限菜单
-//          	total:0,   //总记录数
-//          	page: 1,
-//          	pageNum:1,  //当前页
-//          	pageSize:30,	//每页数量
                 jobNumber:'',
                 listLoading: false,  //加载
                 roleNumber:'',     //角色编号
@@ -324,13 +312,11 @@
                 for(var i =0;i<len;i++){
                     this.accessRoleId.push(this.accessRole[i].menuNo)
                 }
-//              console.log(this.accessRoleId)
             },
             //置空权限菜单
             addChange(obj,pNode,Cnode){ 
             	if (pNode==false) {
-            		this.accessRoleId=[];
-//          		console.log(this.accessRoleId);           		
+            		this.accessRoleId=[];          		
             	}
             },
         	roleSure(){
@@ -352,7 +338,6 @@
 		       		}
 				}).then((res)=>{
 					if(res.data.code =="000000"){
-//						console.log(res.data.messages);
 						this.showRole();
 						this.dialogFormVisible = false;
 						this.autoNum();
@@ -416,9 +401,6 @@
 							this.$nextTick(() =>{
 							    this.$refs.tree1.setCheckedKeys(this.checkedId);
 							})
-                        /*for(var  i =0;i<res.data.data.roleMenu.length;i++){
-                            this.checkedId.push(res.data.data.roleMenu[i])
-                        }*/
 						if (this.stateAdd == false) {
 							this.stateAdd=0;
 						} else{
@@ -451,8 +433,7 @@
             //置空权限菜单
             editChange(obj,pNode,Cnode){ 
             	if (pNode==false) {
-            		this.editPartId=[];
-//          		console.log(this.editPartId);           		
+            		this.editPartId=[];          		
             	}
             },
             roleEdit(){
@@ -496,9 +477,6 @@
            cancelEdit(){
            		this.$refs.tree1.setCheckedKeys([]);
             	this.editFormVisible = false;
-//          	this.editRole = {}; 
-//          	this.roleValue = '';				
-//				this.stateAdd = 0;
             },
             //分页
             handleCurrentChange(val) {
