@@ -817,11 +817,11 @@
 			}
 		},
 		mounted() {
-			this.initPage();
-			this.getChanelName();
-			this.getDetail();
-			this.seeOutlete();
-			this.getVerifyLevel();
+			// this.initPage();
+			// this.getChanelName();
+			// this.getDetail();
+			// this.seeOutlete();
+			// this.getVerifyLevel();
 		}
 	}
 </script>
