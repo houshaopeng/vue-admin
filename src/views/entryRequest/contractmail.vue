@@ -83,13 +83,6 @@
 						<el-input v-model="order.sentOutExpressNo" placeholder="请输入单号" @keyup.native="textNum" :maxlength="20"></el-input>
 					</el-form-item>
 				</el-col>
-				<!-- <el-col :span="6">
-                    <el-form-item label="联系电话:">
-                        <el-input  v-model="order.contactsMobile" placeholder="请输入申请人电话"  onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"  @blur="yanzhengtel" :maxlength="11"></el-input>
-                        <el-input  v-model="order.contactsMobile" placeholder="请输入申请人电话"  @keyup.native="testtel" :maxlength="11"></el-input>
-
-                    </el-form-item>
-                </el-col> -->
 			</el-row>
 			<!-- 查询相关按钮 -->
 			<el-row class="marginbottom">

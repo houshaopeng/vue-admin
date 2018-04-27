@@ -155,8 +155,6 @@
                  filters: [{
                      name: "imageFilter",
                      fn(file) {
-                         /*var type = '|' + file.type.slice(file.type.lastIndexOf('/') + 1) + '|';
-                         return '|jpg|png|jpeg|bmp|gif|xlsx|word|pdf|excel'.indexOf(type) !== -1;*/
                          if(/^[A-Z]+$/.test(file.name.split(".")[1])){
                             return false;
                         }else{
