@@ -331,7 +331,7 @@
 		</template>
 		<div id="noticeBox" :class="[start,end]" v-if="activeName =='first'?true:false" v-show="shownoticeBox">
 			<h2> 最新通知<span class="close" @click="closenoticeBox">X</span></h2>
-			<p class="noticCode"><span class="text">您申请的</span><span class="noticelist" v-for="item in noticelist">订单编号:{{item}}、</span></p>
+			<p class="noticCode"><span class="text">您申请的</span><span class="noticelist" v-for="(item,index) in noticelist" :key="index">订单编号:{{item}}、</span></p>
 			<p class="tongguo">已经审核通过，请将合同整理完毕后，寄回到公司。</p>
 			<p class="currentTime">{{currentTime}}</p>
 		</div>
