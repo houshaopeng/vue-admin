@@ -437,7 +437,7 @@
 
         },
         mounted: function() {
-            this.initpage();
+            // this.initpage();
         }
     }
 </script>
